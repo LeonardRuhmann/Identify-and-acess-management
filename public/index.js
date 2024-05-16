@@ -13,7 +13,7 @@ function loginButton() {
         (item) => item.user === user && item.password === password
       );
       if (userExist) {
-        alert("Usuário autenticado com sucesso!");
+        window.location.href = "./home.html";
       } else {
         alert("Usuário não existe!");
       }
