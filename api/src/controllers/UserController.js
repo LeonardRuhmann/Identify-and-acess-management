@@ -12,7 +12,7 @@ exports.getUser = async (req, res) => {
 exports.createUser = async (req, res) => {
   try {
     const user = new User({
-      name: req.body.name,
+      user: req.body.user,
       password: req.body.password,
     });
     await user.save();

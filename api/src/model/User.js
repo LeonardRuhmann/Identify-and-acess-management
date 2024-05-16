@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/users");
 
 const UserSchema = new mongoose.Schema({
-  name: String,
+  user: String,
   password: String,
 });
 
