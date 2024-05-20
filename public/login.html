@@ -4,7 +4,6 @@
     <link rel="stylesheet" href="style/login.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.js" defer></script>
 
     <title>Login</title>
   </head>
@@ -18,19 +17,20 @@
       </div>
       <div class="form-input">
         <div class="input">
-          <input id="user" type="text" placeholder="user" />
+          <input id="user" type="text" placeholder="User" />
         </div>
         <div class="input">
-          <input id="password" type="text" placeholder="password" />
+          <input id="password" type="text" placeholder="Password" />
         </div>
       </div>
       <div class="form-links">
-        <a href="#">Create a account</a>
+        <a href="./create_user.html">Create a account</a>
         <a href="#">Forget yout password?</a>
       </div>
       <div class="form-button">
-        <button onclick="loginButton()">Login</button>
+        <button id="loginButton">Login</button>
       </div>
     </div>
+    <script type="module" src="./login.js" defer></script>
   </body>
 </html>
