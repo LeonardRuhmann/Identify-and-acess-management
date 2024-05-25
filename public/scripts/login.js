@@ -7,11 +7,9 @@ export async function login() {
   const { user, password } = get_user_and_password();
   const userExist = await userVerification(user, password);
 
-  if ((user, password === "")) {
+  if (!user || !password) {
     alert("Please, fill in the fields below");
-  }
-
-  if (userExist) {
+  } else if (userExist) {
     window.location.href = "./home.html";
   } else {
     alert("User Not Exists!");
