@@ -1,5 +1,7 @@
 import { fetchPostUser } from "./scripts/fetchPost.js";
-import { verificationUser } from "./scripts/verificationUser.js";
+import { get_user_and_password } from "./scripts/getUser.js";
+import { userVerification } from "./scripts/userVerification.js";
+
 // const inputFile = document
 //   .getElementById("image-profile")
 //   .addEventListener("click", () => {
@@ -19,8 +21,19 @@ import { verificationUser } from "./scripts/verificationUser.js";
 // });
 
 async function createUser() {
-  await verificationUser();
-  await fetchPostUser();
+  const { user, password } = get_user_and_password();
+  const userExist = await userVerification(user, password);
+
+  if ((user, password === "")) {
+    alert("Please, fill in the fields below");
+  } else {
+    if (userExist) {
+      alert("This user already exists");
+    } else {
+      await fetchPostUser(user, password);
+      window.location.href = "./home.html";
+    }
+  }
 }
 
 document
