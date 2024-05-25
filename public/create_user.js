@@ -1,4 +1,5 @@
 import { fetchPostUser } from "./scripts/fetchPost.js";
+import { verificationUser } from "./scripts/verificationUser.js";
 // const inputFile = document
 //   .getElementById("image-profile")
 //   .addEventListener("click", () => {
@@ -18,6 +19,7 @@ import { fetchPostUser } from "./scripts/fetchPost.js";
 // });
 
 async function createUser() {
+  await verificationUser();
   await fetchPostUser();
 }
 
