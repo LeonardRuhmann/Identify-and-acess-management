@@ -8,9 +8,75 @@
   </head>
   <body>
     <div id="main">
-      <div id="navbar">navbar</div>
-      <div id="sidebar">sidebar</div>
-      <div id="content">content</div>
+      <div id="navbar">
+        <div id="navbar-title">System Management</div>
+        <div id="navbar-buttons">
+          <div class="navbar-icons">
+            <img src="./assets/profile.png" alt="" />
+          </div>
+          <div class="navbar-icons">
+            <img src="./assets/logout.png" alt="" />
+          </div>
+          <div class="navbar-icons">
+            <img src="./assets/settings.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div id="sidebar">
+        <div class="sidebar-actions">
+          <h3 class="sidebar-action-title">Tasks</h3>
+          <div class="sidebar-actions-items">
+            <p>item 1</p>
+            <p>item 2</p>
+          </div>
+        </div>
+        <div class="sidebar-actions">
+          <h3 class="sidebar-action-title">Tasks</h3>
+          <div class="sidebar-actions-items">
+            <p>item 1</p>
+            <p>item 2</p>
+          </div>
+        </div>
+        <div class="sidebar-actions">
+          <h3 class="sidebar-action-title">Tasks</h3>
+          <div class="sidebar-actions-items">
+            <p>item 1</p>
+            <p>item 2</p>
+          </div>
+        </div>
+        <div class="sidebar-actions">
+          <h3 class="sidebar-action-title">Tasks</h3>
+          <div class="sidebar-actions-items">
+            <p>item 1</p>
+            <p>item 2</p>
+          </div>
+        </div>
+      </div>
+      <div id="content-container">
+        <div id="container">
+          <div id="container-inputs">
+            <div class="input-content">
+              <label id="name" for="name">Name</label>
+              <input id="name" type="text" />
+            </div>
+            <div class="input-content">
+              <label for="cargo">Cargo</label> <input id="cargo" type="text" />
+            </div>
+
+            <div class="input-content">
+              <label for="birthday">Birthday</label>
+              <input id="birthday" type="text" />
+            </div>
+
+            <div class="input-content">
+              <label for="group">Group</label> <input id="group" type="text" />
+            </div>
+          </div>
+          <div id="content-profile">
+            <img src="./assets/profile.png" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./home.js"></script>
   </body>
