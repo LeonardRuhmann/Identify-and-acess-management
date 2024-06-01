@@ -6,11 +6,12 @@ export async function login() {
   //user and password are obtained through the function get_user_and_password (see in getUser.js)
   const { user, password } = get_user_and_password();
   const userExist = await userVerification(user, password);
+  const userId = userExist._id;
 
   if (!user || !password) {
     alert("Please, fill in the fields below");
   } else if (userExist) {
-    window.location.href = "./home.html";
+    window.location.href = `./home.html?userId=${userId}`;
   } else {
     alert("User Not Exists!");
   }
