@@ -1,37 +1,29 @@
 import { fetchPostUser } from "./scripts/fetchPost.js";
-import { get_user_and_password } from "./scripts/getUser.js";
-import { userVerification } from "./scripts/userVerification.js";
+import { getUserDatas } from "./scripts/getUserDatas.js";
+import { getUser } from "./scripts/getUser.js";
+import { getImageProfile } from "./scripts/renderImageProfile.js";
 
-// const inputFile = document
-//   .getElementById("image-profile")
-//   .addEventListener("click", () => {
-//     document.getElementById("file").click();
-//   });
-
-// document.getElementById("file").addEventListener("change", (e) => {
-//   const file = e.target.files[0];
-//   const reader = new FileReader();
-//   reader.onload = () => {
-//     document.getElementById("image-profile").src = reader.result;
-//   };
-//   console.log(reader);
-//   if (file) {
-//     reader.readAsDataURL(file);
-//   }
-// });
+getImageProfile();
 
 async function createUser() {
-  const { user, password } = get_user_and_password();
-  const userExist = await userVerification(user, password);
+  const { image, user, password, group, birthday } = getUserDatas();
+  console.log(image);
 
-  if ((user, password === "")) {
+  const userExist = await getUser(user, password);
+
+  if (!user || !password || !birthday) {
     alert("Please, fill in the fields below");
   } else {
     if (userExist) {
       alert("This user already exists");
     } else {
-      await fetchPostUser(user, password);
-      window.location.href = "./home.html";
+      await fetchPostUser(image, user, password, group, birthday);
+
+      const userId = await getUser(user, password).then((item) => {
+        return item._id;
+      });
+
+      window.location.href = `./home.html?userId=${userId}`;
     }
   }
 }

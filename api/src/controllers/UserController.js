@@ -12,14 +12,17 @@ exports.getUser = async (req, res) => {
 exports.createUser = async (req, res) => {
   try {
     const user = new User({
+      image: req.body.image,
       user: req.body.user,
       password: req.body.password,
+      group: req.body.group,
+      birthday: req.body.birthday,
     });
     await user.save();
     return res.status(200).json("User created successfully");
   } catch (error) {
     return res
       .status(500)
-      .send({ message: error.message + "Ops, algo deu errado aqui." });
+      .send({ message: error.message + " Ops, algo deu errado aqui." });
   }
 };

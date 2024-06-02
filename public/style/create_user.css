@@ -34,8 +34,13 @@ body {
   width: 100%;
   cursor: pointer;
 }
+
+#profile-image-input {
+  display: none;
+}
+
 .form-input {
-  height: 20%;
+  height: 40%;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -43,12 +48,21 @@ body {
   justify-content: space-between;
 }
 .form-input .input {
-  height: 40%;
+  height: 20%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.input select {
+  border-radius: 50px;
+  border: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
 .form-input .input input {
   height: 100%;
   width: 100%;
