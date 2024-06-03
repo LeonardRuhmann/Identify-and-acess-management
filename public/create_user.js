@@ -7,7 +7,6 @@ getImageProfile();
 
 async function createUser() {
   const { image, user, password, group, birthday } = getUserDatas();
-  console.log(image);
 
   const userExist = await getUser(user, password);
 

@@ -12,7 +12,7 @@ exports.getUser = async (req, res) => {
 exports.createUser = async (req, res) => {
   try {
     const user = new User({
-      image: req.body.image,
+      image: req.file.buffer.toString("base64"),
       user: req.body.user,
       password: req.body.password,
       group: req.body.group,

@@ -20,7 +20,6 @@ export function getImageProfile() {
     reader.onload = () => {
       document.getElementById("image-profile").src = reader.result;
     };
-    console.log(reader);
     if (file) {
       reader.readAsDataURL(file);
     }
