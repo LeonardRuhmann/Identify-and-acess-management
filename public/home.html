@@ -12,7 +12,7 @@
         <div id="navbar-title">System Management</div>
         <div id="navbar-buttons">
           <div class="navbar-icons">
-            <img src="./assets/profile.png" alt="" />
+            <img class="image-profile" src="./assets/profile.png" alt="" />
           </div>
           <div class="navbar-icons">
             <img src="./assets/logout.png" alt="" />
@@ -57,27 +57,29 @@
           <div id="container-inputs">
             <div class="input-content">
               <label id="name" for="name">Name</label>
-              <input id="name" type="text" />
+              <input id="nameInput" type="text" disabled />
             </div>
             <div class="input-content">
-              <label for="cargo">Cargo</label> <input id="cargo" type="text" />
+              <label for="office">Office</label>
+              <input id="officeInput" type="text" disabled />
             </div>
 
             <div class="input-content">
               <label for="birthday">Birthday</label>
-              <input id="birthday" type="text" />
+              <input id="birthdayInput" type="text" disabled />
             </div>
 
             <div class="input-content">
-              <label for="group">Group</label> <input id="group" type="text" />
+              <label for="group">Group</label>
+              <input id="groupInput" type="text" disabled />
             </div>
           </div>
           <div id="content-profile">
-            <img src="./assets/profile.png" alt="" />
+            <img class="image-profile" src="./assets/profile.png" alt="" />
           </div>
         </div>
       </div>
     </div>
-    <script src="./home.js"></script>
+    <script type="module" src="./home.js" defer></script>
   </body>
 </html>
