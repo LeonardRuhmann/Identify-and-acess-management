@@ -1,6 +1,6 @@
 import { fetchGet } from "./fetchGet.js";
 
-export async function getUser(user, password) {
+export async function findUser(user, password) {
   const userArray = await fetchGet();
 
   //the method some will search in whole data json to verify if there is an item that matches the user and password variables
