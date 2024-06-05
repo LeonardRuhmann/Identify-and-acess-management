@@ -16,11 +16,12 @@ function getUrlParamId() {
 
 async function renderUser() {
   const user = await findUser();
+  console.log(user);
 
   const inputs = getInputsArea();
 
   inputs.nameInput.value = user.user;
-  inputs.officeInput.value = user.group;
+  inputs.officeInput.value = user.office;
   inputs.birthdayInput.value = user.birthday;
   inputs.groupInput.value = user.group;
   inputs.imageProfile.forEach(

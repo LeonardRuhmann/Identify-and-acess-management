@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 80%;
+  height: 90%;
   width: 30%;
   border: 2px solid black;
   box-shadow: 0px 0px 100px 10px;
@@ -35,6 +35,12 @@ body {
   cursor: pointer;
 }
 
+#image-profile {
+  width: 220px;
+  height: 220px;
+
+}
+
 #profile-image-input {
   display: none;
 }
@@ -47,8 +53,8 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.form-input .input {
-  height: 20%;
+ .input {
+  height: 15%;
   width: 100%;
   display: flex;
   align-items: center;

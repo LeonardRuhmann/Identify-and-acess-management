@@ -15,6 +15,7 @@ exports.createUser = async (req, res) => {
       image: req.file.buffer.toString("base64"),
       user: req.body.user,
       password: req.body.password,
+      office: req.body.office,
       group: req.body.group,
       birthday: req.body.birthday,
     });
