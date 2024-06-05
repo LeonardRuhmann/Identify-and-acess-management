@@ -67,6 +67,14 @@ body {
   border-radius: 500px;
 }
 
+#logout-icon:hover {
+  cursor: pointer;
+}
+
+#settings-icon:hover {
+  cursor: pointer;
+}
+
 #sidebar {
   display: flex;
   flex-direction: column;
@@ -146,7 +154,7 @@ body {
   border-radius: 500px;
 }
 
-.image-profile  {
+.image-profile {
   width: 250px;
   height: 250px;
 }
