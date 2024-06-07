@@ -1,11 +1,11 @@
 import { fetchPostUser } from "../utils/fetchPost.js";
+import { findUser } from "../utils/findUser.js";
 import { getUserDatas } from "./getUserDatas.js";
-import { getUser } from "../utils/getUser.js";
 
 async function handleCreateUser() {
   const { image, user, password, office, group, birthday } = getUserDatas();
 
-  const userExist = await getUser(user, password);
+  const userExist = await findUser(user, password);
 
   if (!user || !password || !birthday) {
     alert("Please, fill in the fields below");
@@ -15,10 +15,9 @@ async function handleCreateUser() {
     if (userExist) {
       alert("This user already exists");
     } else {
-      console.log(office);
       await fetchPostUser(image, user, password, office, group, birthday);
 
-      const userId = await getUser(user, password).then((item) => {
+      const userId = await findUser(user, password).then((item) => {
         return item._id;
       });
 

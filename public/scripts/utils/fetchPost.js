@@ -19,7 +19,7 @@ export async function fetchPostUser(
 
   console.log(formData);
 
-  await fetch("http://localhost:8000/create_user", {
+  await fetch("http://localhost:8000/user/create_user", {
     method: "POST",
     body: formData,
   })
