@@ -1,4 +1,5 @@
 import { fetchGet } from "../utils/fetchGet.js";
+import { getUrlParamId } from "../utils/getUrlParamId.js";
 
 export async function findUserById() {
   const id = getUrlParamId();
@@ -6,10 +7,4 @@ export async function findUserById() {
 
   const user = allUsers.find((user) => user._id === id);
   return user;
-}
-
-function getUrlParamId() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get("userId");
-  return id;
 }

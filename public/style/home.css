@@ -101,6 +101,129 @@ body {
   width: 100%;
   font-size: 25px;
 }
+
+.sidebar-action-title:not(:hover) {
+  transition: 0.5s;
+  transform: scale(1);
+}
+.sidebar-action-title:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.actived {
+  background-color: #24a63c;
+}
+
+#task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+#new-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  height: 5%;
+}
+
+#new-task button {
+  height: 100%;
+  width: 30%;
+  border: none;
+  border-radius: 100px;
+}
+
+#task-container-scroll {
+  height: 90%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  background-color: #133027;
+  height: 300px;
+  margin: 5%;
+  border-radius: 20px;
+}
+
+.task-content-left {
+  width: 750px;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.task-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+.task-title {
+  width: 600px;
+  padding-left: 2%;
+}
+
+.task-date {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.task-description {
+  display: flex;
+  height: 255px;
+  border-radius: inherit;
+  word-wrap: break-word;
+  margin-top: 2%;
+  margin-left: 2%;
+  background-color: #347c41;
+}
+
+.task-description p {
+  margin: 1% 0% 0% 1%;
+  width: 99%;
+}
+
+.task-content-right {
+  width: 45px;
+  border: 2px solid black;
+  border-radius: 0px 20px 0px 0px;
+  background-color: #c7c7c7;
+}
+
+.task-bin {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+.task-update {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+
+.task-bin img {
+  width: 90%;
+}
+
+.task-update img {
+  width: 90%;
+}
+
 .sidebar-actions-items {
   display: flex;
   flex-direction: column;
@@ -108,6 +231,7 @@ body {
   width: 100%;
   gap: 5px;
 }
+
 #content-container {
   display: flex;
   align-items: center;
@@ -116,6 +240,7 @@ body {
   grid-row: 2 / 3;
   width: 100%;
   background-color: var(--green-dark);
+  overflow: hidden;
 }
 #container {
   display: flex;
