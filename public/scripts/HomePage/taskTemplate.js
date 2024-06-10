@@ -1,15 +1,14 @@
 export function taskTemplate(tasks) {
   const container = document.getElementById("container");
   const taskContainer = document.createElement("div");
-
-  container.innerHTML = ``;
-
   taskContainer.id = "task-container";
   taskContainer.innerHTML = `
-      <div id="new-task">
-        <button>New Task</button>
-      </div>
+  <div id="new-task">
+    <button id="new-task-button" >New Task</button>
+  </div>
       `;
+
+  container.innerHTML = ``;
 
   const taskContainerScroll = document.createElement("div");
   taskContainerScroll.id = "task-container-scroll";

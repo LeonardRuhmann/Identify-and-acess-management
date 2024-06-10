@@ -6,7 +6,7 @@ exports.getTodos = async (req, res) => {
 
     const AllToDos = await ToDo.find({ userId: userId });
     if (!AllToDos || AllToDos.length === 0) {
-      return res.status(404).json({ error: "ToDo not found" });
+      return res.status(404).json({ error: "Without ToDos" });
     }
     res.status(200).json(AllToDos);
   } catch (error) {

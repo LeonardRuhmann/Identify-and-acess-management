@@ -1,4 +1,5 @@
 import { getUrlParamId } from "../utils/getUrlParamId.js";
+import { newTaskButtonTemplate } from "./newTaskButtonTemplate.js";
 import { taskTemplate } from "./taskTemplate.js";
 
 export function taskButton() {
@@ -9,7 +10,13 @@ export function taskButton() {
 export async function renderTask() {
   const userId = getUrlParamId();
   const tasks = await fetchGetTask(userId);
-  taskTemplate(tasks);
+
+  if (tasks.error === "Without ToDos") {
+    newTaskButtonTemplate();
+  } else {
+    taskTemplate(tasks);
+  }
+  newTaskButton();
 }
 
 export async function fetchGetTask(userId) {
