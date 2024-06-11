@@ -1,3 +1,5 @@
+import { dateFormatter } from "../utils/dateFormatter.js";
+
 export function taskTemplate(tasks) {
   const container = document.getElementById("container");
   const taskContainer = document.createElement("div");
@@ -16,12 +18,14 @@ export function taskTemplate(tasks) {
   tasks.forEach((task) => {
     const taskContent = document.createElement("div");
 
+    const dateFormated = dateFormatter(task.date);
+
     taskContent.className = "task-content";
     taskContent.innerHTML = `
       <div class="task-content-left">
       <div class="task-top">
       <div class="task-title">${task.title}</div>
-      <div class="task-date">${task.date}</div>
+      <div class="task-date">${dateFormated}</div>
       </div>
       <div class="task-description"><p>${task.description}</p></div>
       </div>
