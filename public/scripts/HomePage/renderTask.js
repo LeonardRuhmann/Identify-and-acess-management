@@ -1,4 +1,5 @@
 import { getUrlParamId } from "../utils/getUrlParamId.js";
+import { newTaskButton } from "./newTask.js";
 import { newTaskButtonTemplate } from "./newTaskButtonTemplate.js";
 import { taskTemplate } from "./taskTemplate.js";
 
