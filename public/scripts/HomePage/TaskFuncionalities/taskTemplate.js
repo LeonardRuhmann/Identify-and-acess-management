@@ -1,4 +1,4 @@
-import { dateFormatter } from "../utils/dateFormatter.js";
+import { dateFormatter } from "../../utils/dateFormatter.js";
 
 export function taskTemplate(tasks) {
   const container = document.getElementById("container");

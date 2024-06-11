@@ -1,4 +1,4 @@
-import { fetchPostTask } from "./fetchPostTask.js";
+import { fetchPostTask } from "../fetchPostTask.js";
 
 export async function saveTask() {
   const taskTitleInput = document.getElementById("taskTitle");

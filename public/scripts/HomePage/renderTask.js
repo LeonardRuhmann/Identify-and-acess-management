@@ -1,9 +1,9 @@
 import { getUrlParamId } from "../utils/getUrlParamId.js";
-import { deleteTaskButton } from "./deleteTask.js";
-import { newTaskButton } from "./newTask.js";
-import { newTaskButtonTemplate } from "./newTaskButtonTemplate.js";
-import { taskTemplate } from "./taskTemplate.js";
-import { updateTaskButton } from "./updateTask.js";
+import { deleteTaskButton } from "./TaskFuncionalities/deleteTask.js";
+import { newTaskButton } from "./TaskFuncionalities/newTask.js";
+import { newTaskButtonTemplate } from "./TaskFuncionalities/newTaskButtonTemplate.js";
+import { taskTemplate } from "./TaskFuncionalities/taskTemplate.js";
+import { updateTaskButton } from "./TaskFuncionalities/updateTask.js";
 
 export function taskButton() {
   const taskButton = document.getElementById("task");

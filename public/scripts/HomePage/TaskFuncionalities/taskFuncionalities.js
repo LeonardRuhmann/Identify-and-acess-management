@@ -1,4 +1,4 @@
-import { taskButton } from "./renderTask.js";
+import { taskButton } from "../renderTask.js";
 
 export function taskFuncionalities() {
   taskButton();

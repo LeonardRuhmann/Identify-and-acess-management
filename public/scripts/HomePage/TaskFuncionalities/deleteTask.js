@@ -1,4 +1,4 @@
-import { renderTask } from "./renderTask.js";
+import { renderTask } from "../renderTask.js";
 
 export function deleteTaskButton() {
   const deleteTaskButton = document.querySelectorAll(".task-bin");

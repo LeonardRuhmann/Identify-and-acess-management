@@ -1,6 +1,6 @@
-import { getUrlParamId } from "../utils/getUrlParamId.js";
+import { getUrlParamId } from "../../utils/getUrlParamId.js";
 import { newTaskTemplate } from "./newTaskTemplate.js";
-import { fetchGetTaskByUserId, renderTask } from "./renderTask.js";
+import { fetchGetTaskByUserId, renderTask } from "../renderTask.js";
 
 export function updateTaskButton() {
   const updateTaskButton = document.querySelectorAll(".task-update");
