@@ -26,8 +26,8 @@ export function taskTemplate(tasks) {
       <div class="task-description"><p>${task.description}</p></div>
       </div>
       <div class="task-content-right">
-      <div class="task-bin"><img src="assets/icons/bin.png"></img></div>
-      <div class="task-update"><img src="assets/icons/write.png"></img></div>
+      <div id="${task._id}" class="task-bin"><img src="assets/icons/bin.png"></img></div>
+      <div id="${task._id}" class="task-update"><img src="assets/icons/write.png"></img></div>
       </div>
       `;
 

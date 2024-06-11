@@ -1,6 +1,6 @@
 const { ToDo } = require("../model/Schemas");
 
-exports.getTodos = async (req, res) => {
+exports.getTodosByUserId = async (req, res) => {
   try {
     const userId = req.params.userId;
 
