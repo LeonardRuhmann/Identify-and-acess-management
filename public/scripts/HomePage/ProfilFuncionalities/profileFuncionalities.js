@@ -1,5 +1,7 @@
-import { seeProfile } from "./seeProfile.js";
+import { seeProfileButton } from "./seeProfile.js";
+import { settingsButton } from "./settingsButton.js";
 
 export function profileFuncionalities() {
-  seeProfile();
+  seeProfileButton();
+  settingsButton();
 }

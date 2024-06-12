@@ -65,3 +65,17 @@ exports.deleteToDo = async (req, res) => {
     res.stauts(500).json({ error: error.toString() });
   }
 };
+
+exports.deleteAllToDos = async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    if (!userId) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    const deletedTasks = await ToDo.deleteMany({ userId: userId });
+    res.status(200).json(deletedTasks);
+  } catch (error) {
+    res.status(500).json({ error: error.toString() });
+  }
+};

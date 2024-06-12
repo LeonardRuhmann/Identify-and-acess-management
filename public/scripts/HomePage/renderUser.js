@@ -3,19 +3,20 @@ import { findUserById } from "./findUserById.js";
 
 export async function renderUser() {
   const user = await findUserById();
-  const inputs = getInputsArea();
+  const { nameInput, officeInput, birthdayInput, groupInput, imageProfile } =
+    getInputsArea();
   const dateFormated = dateFormatter(user.birthday);
 
-  inputs.nameInput.value = user.user;
-  inputs.officeInput.value = user.office;
-  inputs.birthdayInput.value = dateFormated;
-  inputs.groupInput.value = user.group;
-  inputs.imageProfile.forEach(
+  nameInput.value = user.user;
+  officeInput.value = user.office;
+  birthdayInput.value = dateFormated;
+  groupInput.value = user.group;
+  imageProfile.forEach(
     (image) => (image.src = `data:image/jpeg;base64, ${user.image}`)
   );
 }
 
-function getInputsArea() {
+export function getInputsArea() {
   const nameInput = document.getElementById("nameInput");
   const officeInput = document.getElementById("officeInput");
   const birthdayInput = document.getElementById("birthdayInput");
