@@ -350,6 +350,10 @@ body {
   cursor: pointer;
 }
 
+#profile-image-input {
+  display: none;
+}
+
 #delete-user {
   border: none;
   width: 60px;

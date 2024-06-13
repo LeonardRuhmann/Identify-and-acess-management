@@ -43,6 +43,7 @@ exports.updateUser = async (req, res) => {
     const updatedUser = await User.findByIdAndUpdate(
       req.params.id,
       {
+        image: req.file.buffer.toString("base64"),
         user: req.body.user,
         password: req.body.password,
         office: req.body.office,

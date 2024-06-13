@@ -3,7 +3,14 @@ import { findUser } from "../utils/findUser.js";
 import { getUserDatas } from "./getUserDatas.js";
 
 async function handleCreateUser() {
-  const { image, user, password, office, group, birthday } = getUserDatas();
+  const { image, user, password, office, group, birthday } = getUserDatas(
+    "profile-image-input",
+    "user",
+    "password",
+    "office",
+    "group",
+    "birthday"
+  );
 
   const userExist = await findUser(user, password);
 

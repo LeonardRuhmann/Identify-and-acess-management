@@ -8,7 +8,7 @@ export async function fetchPostUser(
 ) {
   const formData = new FormData();
 
-  console.log(office);
+  console.log(image);
 
   formData.append("image", image);
   formData.append("user", user);

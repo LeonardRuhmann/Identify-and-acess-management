@@ -1,4 +1,4 @@
-import { getUrlParamId } from "../utils/getUrlParamId.js";
+import { getUrlParamId } from "../../utils/getUrlParamId.js";
 
 export async function fetchPostTask(title, description) {
   const userId = getUrlParamId();
