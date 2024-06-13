@@ -5,11 +5,16 @@ import { updateUserButton } from "./updateUser.js";
 
 export function settingsButton() {
   const settingsButton = document.getElementById("settings-icon");
+  let isTemplateGenerated = false;
+
   settingsButton.addEventListener("click", () => {
-    settingsTemplate();
-    deleteUserButton();
-    updateUserButton();
-    getImageProfile();
+    if (!isTemplateGenerated) {
+      settingsTemplate();
+      deleteUserButton();
+      updateUserButton();
+      getImageProfile();
+      isTemplateGenerated = true;
+    }
   });
 }
 
